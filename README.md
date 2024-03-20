@@ -52,3 +52,6 @@ Next, <strong>edge detection</strong> is performed on the images using the <stro
 <p align="justify">
 Next, the rotated images are passed to <strong>bounding box detection</strong> using a <strong>YOLO</strong> model that has been specifically <strong>fine-tuned</strong> for <strong>license plate detection</strong>. This model predicts <strong>bounding boxes</strong> around license plates in the images. If the <strong>confidence score</strong> of the prediction is greater than <strong>0.9</strong>, a <strong>cropping</strong> process is performed to focus on the license plate area. If the confidence score is less than <strong>0.9</strong>, this step is skipped. Afterward, the image is ready to be fed into a <strong>deep learning model</strong> to <strong>predict its license plate</strong>.
 </p>
+
+## How we Train the Model?
+Because the input data is image data and it is not possible to use only the CPU. Our project is trained using a pretrained model with the help of GPU. We only use google collab Pro in making the model. with the help of the A100 GPU, we managed to do fine tuning of the previous pretrained TROCR and get much better accuracy.
